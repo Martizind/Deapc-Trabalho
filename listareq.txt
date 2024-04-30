@@ -53,3 +53,5 @@ Nome-Adicionar formas de pagamento
 Descrição-Como Operadores das Viagem quero adiconar as formas possiveis de pagamento(Referencia Multibanco; Cartão de débito);   			
 Prioridade-Alta		
 
+
+
