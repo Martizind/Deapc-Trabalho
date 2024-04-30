@@ -1,0 +1,55 @@
+Ator-Cliente
+
+Código-CLI01 	
+Nome-Filtragem de preços		
+Descrição-Como cliente quero escolher o preço máximo da minha viagem, quer do hotel como do voo. 			
+Prioridade-Alta		
+
+Código-CLI02	
+Nome-Escolha da data		
+Descrição-Como cliente quero escolher a data da viagem de ida e de volta.			
+Prioridade-Alta		
+
+Código-CLI03	
+Nome-Escolha do destino		
+Descrição-Como cliente quero escolher o destino da minha viagem.			
+Prioridade-Alta
+
+Código-CLI04	
+Nome-Aceader ao perfil		
+Descrição-Como cliente quero aceder ao meu historico de viagens e respetivas informaçoes.			
+Prioridade-Alta
+
+Código-CLI05	
+Nome-Acrescentar a quantidade de passageiros		
+Descrição-Como cliente quero acrescentar a quantidade de passageiros da minha viagem.			
+Prioridade-Alta
+
+
+Ator-Operadores das Viagens 
+
+Código-OPER01	
+Nome-Fazer login da sua conta		
+Descrição-Como Operadores das Viagem tenho de fazer login na minha conta  			
+Prioridade-Alta
+		 
+Código-OPER02	
+Nome-Adicionar estadias		
+Descrição-Como Operadores das Viagem quero adiconar hoteis   			
+Prioridade-Alta		
+
+Código-OPER02.1
+Nome-Adicionar estadias		
+Descrição-Como Operadores das Viagem quero adiconar informacao util aos clientes dos hoteis   			
+Prioridade-Alta	
+
+Código-OPER03	
+Nome-Fazer o login da sua conta		
+Descrição-Como operador, quero guardar os dados pessoais dos clientes para futuras compras(por parte dos mesmos) e também permitir o acesso ao seu historico de viagens.		
+Prioridade-Alta	
+
+Código-OPER04
+Nome-Adicionar formas de pagamento		
+Descrição-Como Operadores das Viagem quero adiconar as formas possiveis de pagamento(Referencia Multibanco; Cartão de débito);   			
+Prioridade-Alta		
+
