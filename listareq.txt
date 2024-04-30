@@ -48,6 +48,12 @@ Nome-Fazer o login da sua conta
 Descrição-Como operador, quero guardar os dados pessoais dos clientes para futuras compras(por parte dos mesmos) e também permitir o acesso ao seu historico de viagens.		
 Prioridade-Alta	
 
+Código-OPER03.1   
+Nome-Guardar os dados pessoais         
+Descrição-Como operador, quero guardar o nome, o email, o CC e o tipo de utilizador do cliente.
+Prioridade-Alta 
+
+
 Código-OPER04
 Nome-Adicionar formas de pagamento		
 Descrição-Como Operadores das Viagem quero adiconar as formas possiveis de pagamento(Referencia Multibanco; Cartão de débito);   			
