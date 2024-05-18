@@ -1,55 +1,58 @@
 <html>
 	<head>
 		<title>Homepage</title>
-		<h1>ISEP Trip</h1>
+		<link rel="stylesheet" href="../styles/index.css">
 	</head>
 
 	<body>
-		<h3>Sua viagem</h3>
+		<div id="barra" >
+			<h1>ISEP Trip</h1>
+			<button type="button">Login</button>
+		</div>
+		<h2>Sua viagem</h2> 
 		<fieldset>
-			<label for="locin">Local de partida</label>
-  			<input type="text" id="locin" name="locin"><br><br>
-  			<label for="locout">Local de chegada</label>
-  			<input type="text" id="locout" name="locout"><br><br>
-    		<label for="datin">Data de Partida</label>
-  			<input type="date" id="datin" name="datin">
-			<label for="datout">Data de Volta</label>
-            <input type="date" id="datout" name="datout"><br><br>
-			<label for="xmin">Preço Mínimo</label>
-			<form 
-			oninput="xmin.value=parseInt(a.value)*100">
-  			<input type="range" id="a" name="a" value="0">
-  			<output name="xmin" for="a"></output> euros
-  			<br>
-			</form>
-			<label for="xmax">Preço Máximo</label>
-			<form 
-			oninput="xmax.value=parseInt(b.value)*100">
-  			<input type="range" id="b" name="b" value="10000">
-  			<output name="xmax" for="b"></output> euros
-  			<br><br>
-			</form>
-			<form>
-				<label for="n">Nº de Pessoas</label>
-				<select id="n" name="n">
-				<option value="n">1</option>
-				<option value="n">2</option>
-				<option value="n" selected>3</option>
-				<option value="n">4</option>
-				<option value="n">5</option>
-				<option value="n">6</option>
-				<option value="n">7</option>
-				<option value="n">8</option>
-				<option value="n">9</option>
-				<option value="n">10</option>
-				</select>
-			  </form>
-    		<button type="button">Pesquisa</button>
+			<div class="column">
+				<input type="text" id="locin" name="locin" placeholder="Local de partida"><br><br>
+				<label for="datin">Data de partida</label>
+  				<input type="date" id="datin" name="datin">
+				<label for="maxhotel">Preço Máximo(Hotel)</label>
+				<form oninput="maxhotel.value=parseInt(a.value)*100">
+					<input type="range" id="a" name="a" value="10000">
+  					<output name="maxhotel" for="a"></output> euros <br>
+				</form>
+				<form>
+					<label for="n">Nº de Pessoas</label>
+					<select id="n" name="n">
+						<option value="n">1</option>
+						<option value="n">2</option>
+						<option value="n" selected>3</option>
+						<option value="n">4</option>
+						<option value="n">5</option>
+						<option value="n">6</option>
+						<option value="n">7</option>
+						<option value="n">8</option>
+						<option value="n">9</option>
+						<option value="n">10</option>
+					</select>
+				</form>
+			</div>
+			<div class="column">
+				<input type="text" id="locout" name="locout" placeholder="Local de chegada"><br><br>
+				<label for="datout">Data de volta</label>
+				<input type="date" id="datout" name="datout">
+				<label for="maxviagem">Preço Máximo(Viagem)</label>
+				<form oninput="maxviagem.value=parseInt(b.value)*100">
+					<input type="range" id="b" name="b" value="10000">
+					<output name="maxviagem" for="b"></output> euros <br>
+				</form>
+			</div>
+			<button type="button" id="pesquisa">Pesquisa</button>
   		</fieldset>
-		<br><br><br>
-		<h3>Contactos</h3><br>
-		<h5>Email:iseptrip@isep.pt</h5>
-		<h5>Email:iseptrip@isep.pt</h5>
-		<h5>Tlm.:203202020202</h5>
+		<div id="contactos">
+			<h2>Contactos</h2>
+			<h5>Email:iseptrip@isep.pt</h5>
+			<h5>Fax:iseptrip@isep.pt</h5>
+			<h5>Tlm.:203202020202</h5>
+		</div>
 	</body>
 </html>
