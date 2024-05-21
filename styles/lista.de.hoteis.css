@@ -1,13 +1,9 @@
 body {
-    display: grid;
-    grid-template-columns: 1fr 2fr; /* Divide a tela em duas colunas */
-    grid-gap: 20px; /* Espaçamento entre as colunas */
-    align-items: center; /* Centraliza verticalmente */
-    text-align: center;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
+
 #barra {
     background-color: #000;
     color: #fff;
@@ -41,12 +37,18 @@ img {
 }
 
 fieldset {
-    border: none; /* Remove a borda do campo de grupo */
+    background-color: #fff;
+    opacity: 0.9;
+    padding: 20px;
+    text-align: left;
+    border: 2px solid #000;
+    display: block;
+    margin: 10px;
 }
 
 label {
+    float:right;
     display: block; /* Faz com que cada rótulo apareça em uma nova linha */
     margin-bottom: 10px; /* Adiciona um espaçamento inferior entre os rótulos */
-    float: right;
+    margin-right: 150px;
 }
-
