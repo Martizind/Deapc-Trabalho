@@ -26,16 +26,6 @@ body {
   margin: 0;
 }
 
-#barra button {
-  background-color: #fff;
-  color: #000;
-  border: none;
-  border-radius: 12px;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 1em;
-}
-
 .container {
   width: 100%; /* Ocupa toda a largura da tela */
   display: flex;
