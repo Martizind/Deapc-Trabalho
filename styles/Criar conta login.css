@@ -1,13 +1,13 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Ocupa toda a altura da tela */
-  margin: 0;
+  background-image: url("../images/foto-panoramica-das-rochas-a-beira-mar-em-cascais-portugal.jpg");
+  background-position: right top;
+  background-size: cover;
   text-align: center;
   font-family: Arial, sans-serif;
+  margin: 0;
   padding: 0;
 }
+
 #barra {
   background-color: #000;
   color: #fff;
@@ -26,18 +26,14 @@ body {
   margin: 0;
 }
 
-.container {
-  width: 100%; /* Ocupa toda a largura da tela */
-  display: flex;
-  flex-direction: column; /* Layout em coluna */
-  align-items: center; /* Alinha o conteúdo horizontalmente */
-}
-
-.separator {
-  height: 100vh; /* Altura igual à altura da tela */
-  width: 1px; /* Largura da linha vertical */
-  background-color: #000; /* Cor da linha vertical */
-  margin-left: 10px; /* Adiciona espaço à esquerda */
+fieldset {
+  background-color: #fff;
+  opacity: 0.9;
+  padding: 20px;
+  text-align: left;
+  border: 2px solid #000;
+  display: inline-block;
+  margin: 40px;
 }
 
 .right, .left {
@@ -45,39 +41,67 @@ body {
 }
 
 .right {
-  border-left: 1px solid #ccc;
+  border-left: 3px solid #ccc;
 }
 
 .left {
-  padding-right: 20px; /* Ajuste o valor conforme necessário para mover mais para a esquerda */
-  align-self: flex-start; /* Alinha à parte superior */
+  padding-right: 20px; 
+  align-self: flex-start; 
 }
 
 .form-container {
   display: flex;
-  flex-direction: row; /* Layout em linha */
-  align-items: flex-start; /* Alinha ao topo */
+  flex-direction: row;
+  align-items: flex-start; 
 }
 
 form {
   margin-bottom: 20px;
 }
 
-.button1, .button2 {
+input[type="submit"]{
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
   padding: 10px 20px;
-  margin-right: 10px;
+  cursor: pointer;
+  font-size: 1em;
+  float:right;
 }
 
+input[type="text"], input[type="password"], input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
 h4 {
-  text-align: center; /* Alinha o texto "Tipo de Utilizador" ao centro */
+  text-align: left;
 }
 
 .user-options {
   display: flex;
-  flex-direction: column; /* Alinha verticalmente */
-  align-items: center; /* Alinha horizontalmente */
-  padding: 20px;
+  flex-direction: column; 
+  flex-wrap: wrap;
+  padding: 15px;
 }
+
+.Operador, .Cliente {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; 
+}
+
+label {
+  margin-left: 5px;
+}
+
+
 
 
 

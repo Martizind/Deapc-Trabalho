@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
   <link rel="stylesheet" type="text/css" href="../styles/Criar conta login.css">
 </head>
@@ -10,40 +8,43 @@
   <div id="barra" >
     <h1>ISEP Trip</h1>
   </div>
-<div class="container">
+ 
+<fieldset>
   <div class="form-container">
     <div class="left">
       <h2>Login</h2>
-      <form action="/action_page.php">
-        <label for="email2">Email:</label><br>
-        <input type="text" id="email2" name="email2"><br><br>
-        <label for="senha2">Palavra-Passe</label><br>
-        <input type="text" id="senha2" name="senha2"><br><br>
+      <form>
+        <input type="email" id="email2" name="email2" placeholder="Email"><br><br>
+        <input type="password" id="senha2" name="senha2" placeholder="Palavra-Passe"><br><br>
         <input type="submit" value="Avançar">
       </form>
     </div>
-    <div class="separator"></div>
     <div class="right">
       <h2>Criar Conta</h2>
-      <form action="/action_page.php">
-        <label for="nome">Nome</label><br>
-        <input type="text" id="nome" name="nome"><br><br>
-        <label for="email1">Email:</label><br>
-        <input type="text" id="email1" name="email1"><br><br>
-        <label for="cc1">Cartão de Cidadão</label><br>
-        <input type="text" id="cc1" name="cc1"><br><br>
-        <label for="senha1">Palavra-Passe</label><br>
-        <input type="text" id="senha1" name="senha1"><br><br>
+      <form>
+        <input type="text" id="nome" name="nome" placeholder="Nome"><br><br>
+        <input type="text" id="cc1" name="cc1" placeholder="Cartao de Cidadao"><br><br>
+        <input type="email" id="email1" name="email1" placeholder="Email"><br><br>
+        <input type="password" id="senha1" name="senha1" placeholder="Palavra-Passe"><br><br>
         <div class="user-options"> 
           <h4>Tipo de Utilizador</h4>
-          <button class="button1">Cliente</button>
-          <button class="button2">Operador</button>
+          <form></form>
+            <div class="Cliente">
+              <input type="radio" id="cliente" name="user" value="Cliente">
+              <label for="cliente">Cliente</label>
+            </div>
+            <div class="Operador">
+              <input type="radio" id="operador" name="user" value="Operador">
+              <label for="operador">Operador</label>
+            </div>
+          </form>
         </div>
         <input type="submit" value="Avançar">
       </form>
     </div>
   </div>
-</div>
+</fieldset>
+
 
 </body>
 </html>
