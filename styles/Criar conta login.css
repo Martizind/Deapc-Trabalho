@@ -59,7 +59,7 @@ form {
   margin-bottom: 20px;
 }
 
-input[type="submit"]{
+input[type="button"]{
   background-color: #000;
   color: #fff;
   border: none;
