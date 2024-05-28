@@ -2,19 +2,20 @@
 	<head>
 		<title>Homepage</title>
 		<link rel="stylesheet" href="../styles/index.css">
+		<script src="index.js"></script>
 	</head>
 
 	<body>
 		<div id="barra" >
 			<h1>ISEP Trip</h1>
-			<button type="button">Login</button>
+			<button type="button" onclick="login()">Login</button>
 		</div>
 		<h2>Sua viagem</h2> 
 		<fieldset>
-			<div class="column">
-				<input type="search" id="locin" name="locin" placeholder="Local de partida"><br><br>
+			<div class="coluna">
+				<input type="search" id="locin" name="locin" placeholder="Local de partida" required><br><br>
 				<label for="datin">Data de partida</label>
-  				<input type="date" id="datin" name="datin">
+  				<input type="date" id="datin" name="datin" required>
 				<label for="maxhotel">Preço Máximo(Hotel)</label>
 				<form oninput="maxhotel.value=parseInt(a.value)*100">
 					<input type="range" id="a" name="a" value="10000">
@@ -22,31 +23,20 @@
 				</form>
 				<form>
 					<label for="n">Nº de Pessoas</label>
-					<select id="n" name="n">
-						<option value="n">1</option>
-						<option value="n">2</option>
-						<option value="n" selected>3</option>
-						<option value="n">4</option>
-						<option value="n">5</option>
-						<option value="n">6</option>
-						<option value="n">7</option>
-						<option value="n">8</option>
-						<option value="n">9</option>
-						<option value="n">10</option>
-					</select>
+					<input type="number" id="npessoas" name="npessoas" min="1" max="20" required>
 				</form>
 			</div>
-			<div class="column">
-				<input type="search" id="locout" name="locout" placeholder="Local de chegada"><br><br>
+			<div class="coluna">
+				<input type="search" id="locout" name="locout" placeholder="Local de chegada" required><br><br>
 				<label for="datout">Data de volta</label>
-				<input type="date" id="datout" name="datout">
+				<input type="date" id="datout" name="datout" required>
 				<label for="maxviagem">Preço Máximo(Viagem)</label>
 				<form oninput="maxviagem.value=parseInt(b.value)*100">
 					<input type="range" id="b" name="b" value="10000">
 					<output name="maxviagem" for="b"></output> euros <br>
 				</form>
 			</div>
-			<button type="button" id="pesquisa">Pesquisa</button>
+			<button type="button" onclick="lista()" id="pesquisa">Pesquisa</button>
   		</fieldset>
 		<div id="contactos">
 			<h2>Contactos</h2>
