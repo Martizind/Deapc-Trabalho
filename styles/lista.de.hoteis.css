@@ -22,6 +22,11 @@ body {
     margin: 0;
 }
 
+#buttons {
+    display: flex;
+    gap: 10px;
+}
+
 #barra button {
     background-color: #fff;
     color: #000;
@@ -30,7 +35,6 @@ body {
     padding: 10px 20px;
     cursor: pointer;
     font-size: 1em;
-    margin-right: 0px;
 }
 
 img {

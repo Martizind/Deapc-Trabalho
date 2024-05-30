@@ -1,3 +1,7 @@
+function homepage() {
+    window.location.href = "./index.html";
+}
+
 function login() {
     window.location.href = "./Criar conta login.html";
 }
