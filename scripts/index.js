@@ -6,6 +6,32 @@ function login() {
     window.location.href = "./Criar conta login.html";
 }
 
+function carrinho() {
+    window.location.href = "./finalizacao.html";
+}
+
+function add() {
+    const checkboxes = document.querySelectorAll('.adicionar:checked');
+    const carrinho = [];
+
+    checkboxes.forEach(checkbox => {
+        const hotelInfo = checkbox.nextElementSibling;
+        const hotel = {
+            nome: hotelInfo.querySelector('h4').innerText,
+            estrelas: hotelInfo.querySelector('h5').innerText,
+            localizacao: hotelInfo.querySelector('h6:nth-of-type(1)').innerText,
+            instalacoes: hotelInfo.querySelector('h6:nth-of-type(2)').innerText,
+            hospitalidade: hotelInfo.querySelector('h6:nth-of-type(3)').innerText,
+            descricao: hotelInfo.querySelector('h6:nth-of-type(4)').innerText,
+            preco: hotelInfo.querySelector('h6:nth-of-type(5)').innerText
+        };
+        carrinho.push(hotel);
+    });
+
+    alert('Adicionado com sucesso');
+}
+        
+
 function lista() {
     var locin = document.getElementById("locin");
     var locout = document.getElementById("locout");

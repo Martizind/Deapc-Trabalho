@@ -2,19 +2,20 @@
 <head>
     <title>Isep Trip Lista de Hoteis</title>
     <link rel="stylesheet" type="text/css" href="../styles/lista.de.hoteis.css">
+    <script src="index.js"></script>
 </head>
 <body>
     <div id="barra" >
-        <h1>ISEP Trip</h1>
+        <h1 onclick="homepage()">ISEP Trip</h1>
         <div id="buttons">
-            <button type="button">Login</button>
-            <button type="button">Carrinho</button>
+            <button type="button" onclick="login()">Login</button>
+            <button type="button" onclick="carrinho()">Carrinho</button>
         </div>
     </div>
     
     <fieldset>
         <img src="../images/Hotel sereno.jpg" alt="1 imagem" width="500" height="300">
-        <input type="checkbox" id="adicionar">
+        <input type="checkbox" id="hotel1">
         <label for="hotel1">
             <h4>Hotel Sereno</h4>
             <h5>5 estrelas</h5>
@@ -27,7 +28,7 @@
     </fieldset>
     <fieldset>
         <img src="../images/Hotel Barci.jpg" alt="2 imagem" width="500" height="300">
-        <input type="checkbox" id="adicionar">
+        <input type="checkbox" id="hotel2">
         <label for="hotel2">
             <h4>Hotel Barci</h4>
             <h5>5 estrelas</h5>
@@ -40,7 +41,7 @@
     </fieldset>
     <fieldset>
         <img src="../images/Hotel Falto.jpg" alt="3 imagem" width="500" height="300">
-        <input type="checkbox" id="adicionar">
+        <input type="checkbox" id="hotel3">
         <label for="hotel3">
             <h4>Hotel Sereno</h4>
             <h5>5 estrelas</h5>
@@ -51,8 +52,8 @@
             <h6>Preço Total: 929,00 euros</h6>
         </label>
     </fieldset>
-    <div id="Ad">
-        <button type="button">Adicionar ao Carrinho</button>
+    <div id="Add">
+        <button type="button" id="Add" onclick="add()">Adicionar ao Carrinho</button>
     </div>
 </body>
 </html>
