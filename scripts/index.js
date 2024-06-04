@@ -130,7 +130,28 @@ function login2() {
 }
 
 
-function dadospagamento(){
+
+document.addEventListener('DOMContentLoaded', function() {
+    var formapag2 = document.getElementById('formapag2');
+    var dadosCartao = document.getElementById('dadoscartao');
+
+    formapag2.addEventListener('change', function() {
+        if (formapag2.checked) {
+            dadosCartao.style.display = 'block';
+        }
+    });
+
+    var formapag1 = document.getElementById('formapag1');
+    formapag1.addEventListener('change', function() {
+        if (formapag1.checked) {
+            dadosCartao.style.display = 'none';
+        }
+    });
+});
+
+
+function dadospagamento() {
+
     var nome = document.getElementById("nome");
     var cc1 = document.getElementById("cc1");
     var email1 = document.getElementById("email1");
@@ -138,65 +159,75 @@ function dadospagamento(){
     var formapag2 = document.getElementById("formapag2");
     var numerocartao = document.getElementById("numerocartao");
     var cvv = document.getElementById("cvv");
+    var dadosCartao = document.getElementById('dadoscartao');
 
     if (!nome.value) {
-     alert('Por favor, preencha com o nome.');
+     alert('Por favor, preencha o campo nome.');
      nome.focus();
      return;
     }
 
     if (!cc1.value) {
-      alert('Por favor, preencha o Cartão de Cidadao');
+      alert('Por favor, preencha o campo número Cartão de Cidadao');
      cc1.focus();
       return;
     }
 
     if (!email1.value) {
-      alert('Por favor, preencha o email.');
+      alert('Por favor, preencha o campo email.');
       email1.focus();
       return;
     }
 
-    if (!email1.value.includes('@')) {
+    if (!email1.value.includes('@') || !email1.value.endsWith('.com')) {
      alert('Por favor, utilize um email válido que contenha "@" e termine com ".com".');
      email1.focus();
      return;
    }
 
+   if (cc1.value.length < 8) {
+    alert('O numero do cc deve conter 8 numeros.');
+    cc1.focus();
+    return;
+   }
+
     if (!formapag1.checked && !formapag2.checked) {
-     alert('Por favor, preencha a forma de pagamento.');
+     alert('Por favor, preencha o campo da forma de pagamento.');
       formapag1.focus();
      return;
     }
+           
 
-    if (cc1.value.length < 8) {
-     alert('O numero do cc deve conter 8 numeros.');
-     cc1.focus();
-     return;
-    }
+    if (formapag2.checked) {
 
-    if (!numerocartao.value) {
-    alert('Por favor, preencha o número do Cartão de Crédito.');
-    cc1.focus();
-     return;
-    }
+        dadosCartao.style.display = 'block';
 
-    if (numerocartao.value.length < 16) {
-     alert('O numero do cc deve conter 8 numeros.');
-    cc1.focus();
-    return;
-    }
+        if (!numerocartao.value) {
+        alert('Por favor, preencha o campo do número do Cartão de Crédito.');
+        numerocartao.focus();
+        return;
+        }
 
-    if (!cvv.value) {
-     alert('Por favor, preencha o campo do CVV.');
-     cvv.focus();
-    return;
-    }
+        if (numerocartao.value.length < 16) {
+        alert('O numero do cartão de crédito deve conter 16 numeros.');
+        numerocartao.focus();
+        return;
+        }
 
-    if (cvv.value.length < 3) {
-    alert('O numero do cvv deve conter 3 numeros.');
-    cvv.focus();
-    return;
-    }
+        if (!cvv.value) {
+        alert('Por favor, preencha o campo do CVV.');
+        cvv.focus();
+        return;
+        }
 
-  }
+        if (cvv.value.length < 3) {
+        alert('O numero do cvv deve conter 3 numeros.');
+            cvv.focus();
+        return;
+        }
+
+    } 
+
+    alert('Reserva realizada com sucesso!');
+    alert('Após boa cobrança, receberá no seu email os detalhes da sua reserva!');
+}

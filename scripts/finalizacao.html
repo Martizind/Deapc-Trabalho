@@ -2,7 +2,7 @@
 <head>
     <title>Finalizacao da compra </title>
     <link rel="stylesheet" type="text/css" href="../styles/finalizacao.css">
-    <script src="finalizacao.js"></script>
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -45,7 +45,8 @@
                 </label>
                 <button type="button" onclick="dadospagamento()" id="pesquisa">Confirmar</button>              
             </div> 
-            <div class="dadoscartao">
+            
+            <div class="dadoscartao" id="dadoscartao" style="display: none;">
                 <label>
                     <input type="text" id="numerocartao" placeholder="Número Cartão" required>
                 </label>
@@ -53,7 +54,7 @@
                     <input type="text" id="cvv" placeholder="CVV" required>
                 </label>
                 <label>
-                    Data de validade
+                    validade CC
                     <input type="date" id="validade" placeholder="Validade" required>
                 </label>
                             
