@@ -128,3 +128,75 @@ function login2() {
 
     window.location.href = "./dadospessoais.html";
 }
+
+
+function dadospagamento(){
+    var nome = document.getElementById("nome");
+    var cc1 = document.getElementById("cc1");
+    var email1 = document.getElementById("email1");
+    var formapag1 = document.getElementById("formapag1");
+    var formapag2 = document.getElementById("formapag2");
+    var numerocartao = document.getElementById("numerocartao");
+    var cvv = document.getElementById("cvv");
+
+    if (!nome.value) {
+     alert('Por favor, preencha com o nome.');
+     nome.focus();
+     return;
+    }
+
+    if (!cc1.value) {
+      alert('Por favor, preencha o Cartão de Cidadao');
+     cc1.focus();
+      return;
+    }
+
+    if (!email1.value) {
+      alert('Por favor, preencha o email.');
+      email1.focus();
+      return;
+    }
+
+    if (!email1.value.includes('@')) {
+     alert('Por favor, utilize um email válido que contenha "@" e termine com ".com".');
+     email1.focus();
+     return;
+   }
+
+    if (!formapag1.checked && !formapag2.checked) {
+     alert('Por favor, preencha a forma de pagamento.');
+      formapag1.focus();
+     return;
+    }
+
+    if (cc1.value.length < 8) {
+     alert('O numero do cc deve conter 8 numeros.');
+     cc1.focus();
+     return;
+    }
+
+    if (!numerocartao.value) {
+    alert('Por favor, preencha o número do Cartão de Crédito.');
+    cc1.focus();
+     return;
+    }
+
+    if (numerocartao.value.length < 16) {
+     alert('O numero do cc deve conter 8 numeros.');
+    cc1.focus();
+    return;
+    }
+
+    if (!cvv.value) {
+     alert('Por favor, preencha o campo do CVV.');
+     cvv.focus();
+    return;
+    }
+
+    if (cvv.value.length < 3) {
+    alert('O numero do cvv deve conter 3 numeros.');
+    cvv.focus();
+    return;
+    }
+
+  }

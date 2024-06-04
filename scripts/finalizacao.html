@@ -2,12 +2,13 @@
 <head>
     <title>Finalizacao da compra </title>
     <link rel="stylesheet" type="text/css" href="../styles/finalizacao.css">
+    <script src="finalizacao.js"></script>
 </head>
 
 <body>
     <div id="barra" >
-        <h1>ISEP Trip</h1>
-        <button type="button">Login</button>
+        <h1 onclick="homepage()">ISEP Trip</h1>
+        <button type="button" onclick="login()">Login</button>
     </div>
 
     <div class="container">
@@ -28,21 +29,34 @@
     <div class="principal">
         <div class="pagamento">
             <h3>Dados Pagamento</h3>
-            <input type="text" placeholder="Nome">
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Cartão de cidadão">
+            <input type="text" id="nome" placeholder="Nome" required>
+            <input type="text" id="email1" placeholder="Email" required>
+            <input type="text" id="cc1" placeholder="Cartão de cidadão" required>
         </div>
+
             <div class="metodos-pagamento">
                 <label>
-                    <input type="radio" name="pagamento" value="referencia-bancaria">
+                    <input type="radio" name="pagamento" id= "formapag1" value="referencia-bancaria" required>
                     Referência Bancária
                 </label>
                 <label>
-                    <input type="radio" name="pagamento" value="cartao-credito">
+                    <input type="radio" name="pagamento" id="formapag2" value="cartao-credito" required>
                     Cartão de Crédito (Visa)
                 </label>
-                <button type="button" onclick="lista()" id="pesquisa">Confirmar</button>
+                <button type="button" onclick="dadospagamento()" id="pesquisa">Confirmar</button>              
+            </div> 
+            <div class="dadoscartao">
+                <label>
+                    <input type="text" id="numerocartao" placeholder="Número Cartão" required>
+                </label>
+                <label>
+                    <input type="text" id="cvv" placeholder="CVV" required>
+                </label>
+                <label>
+                    Data de validade
+                    <input type="date" id="validade" placeholder="Validade" required>
+                </label>
+                            
             </div> 
     </div>   
-
 </body>
