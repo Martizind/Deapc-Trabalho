@@ -134,10 +134,16 @@ function login2() {
 document.addEventListener('DOMContentLoaded', function() {
     var formapag2 = document.getElementById('formapag2');
     var dadosCartao = document.getElementById('dadoscartao');
+    var  formapag1 = document.getElementById('formapag1');
 
     formapag2.addEventListener('change', function() {
         if (formapag2.checked) {
             dadosCartao.style.display = 'block';
+            referenciamb.style.display = 'none';
+        }else
+        {
+            dadosCartao.style.display = 'none';
+            referenciamb.style.display= 'block';   
         }
     });
 
@@ -145,9 +151,12 @@ document.addEventListener('DOMContentLoaded', function() {
     formapag1.addEventListener('change', function() {
         if (formapag1.checked) {
             dadosCartao.style.display = 'none';
+            referenciamb.style.display= 'block';
         }
     });
 });
+ 
+
 
 
 function dadospagamento() {
