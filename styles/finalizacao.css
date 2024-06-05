@@ -162,7 +162,7 @@ img {
     margin-right: 500px;
 }
  
-.dadoscartao input[type="text"], input[type="date"] {
+.dadoscartao input[type="text"], input[type="month"] {
     margin: 10px auto;
     padding: 10px;
     width: 200px;
