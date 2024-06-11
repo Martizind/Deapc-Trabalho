@@ -11,33 +11,35 @@
 			<button type="button" onclick="login()">Login</button>
 		</div>
 		<h2>Sua viagem</h2> 
-		<fieldset>
-			<div class="coluna">
-				<input type="search" id="locin" name="locin" placeholder="Local de partida" required><br><br>
-				<label for="datin">Data de partida</label>
-  				<input type="date" id="datin" name="datin" required>
-				<label for="maxhotel">Preço Máximo(Hotel)</label>
-				<form oninput="maxhotel.value=parseInt(a.value)*100">
-					<input type="range" id="a" name="a" value="10000">
-  					<output name="maxhotel" for="a"></output> euros <br>
-				</form>
-				<form>
-					<label for="n">Nº de Pessoas</label>
-					<input type="number" id="npessoas" name="npessoas" min="1" max="20" required>
-				</form>
-			</div>
-			<div class="coluna">
-				<input type="search" id="locout" name="locout" placeholder="Local de chegada" required><br><br>
-				<label for="datout">Data de volta</label>
-				<input type="date" id="datout" name="datout" required>
-				<label for="maxviagem">Preço Máximo(Viagem)</label>
-				<form oninput="maxviagem.value=parseInt(b.value)*100">
-					<input type="range" id="b" name="b" value="10000">
-					<output name="maxviagem" for="b"></output> euros <br>
-				</form>
-			</div>
-			<button type="button" onclick="lista()" id="pesquisa">Pesquisa</button>
-  		</fieldset>
+		<form action="index.php" method="post">
+			<fieldset>
+				<div class="coluna">
+					<input type="search" id="locin" name="locin" placeholder="Local de partida" required><br><br>
+					<label for="datin">Data de partida</label>
+					<input type="date" id="datin" name="datin" required>
+					<label for="maxhotel">Preço Máximo(Hotel)</label>
+					<form oninput="maxhotel.value=parseInt(a.value)*100">
+						<input type="range" id="a" name="a" value="10000">
+						<output name="maxhotel" for="a"></output> euros <br>
+					</form>
+					<form>
+						<label for="n">Nº de Pessoas</label>
+						<input type="number" id="npessoas" name="npessoas" min="1" max="20" required>
+					</form>
+				</div>
+				<div class="coluna">
+					<input type="search" id="locout" name="locout" placeholder="Local de chegada" required><br><br>
+					<label for="datout">Data de volta</label>
+					<input type="date" id="datout" name="datout" required>
+					<label for="maxviagem">Preço Máximo(Viagem)</label>
+					<form oninput="maxviagem.value=parseInt(b.value)*100">
+						<input type="range" id="b" name="b" value="10000">
+						<output name="maxviagem" for="b"></output> euros <br>
+					</form>
+				</div>
+				<button type="button" onclick="lista()" id="pesquisa">Pesquisa</button>
+			</fieldset>
+		</form>
 		<div id="contactos">
 			<h2>Contactos</h2>
 			<h5>Email:iseptrip@isep.pt</h5>
