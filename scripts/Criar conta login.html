@@ -6,46 +6,42 @@
   <script src="index.js"></script>
 </head>
 <body>
-  <div id="barra" >
-<h1 onclick="homepage()">ISEP Trip</h1>
+  <div id="barra">
+    <h1 onclick="homepage()">ISEP Trip</h1>
   </div>
  
-<fieldset>
-  <div class="form-container">
-    <div class="left">
-      <h2>Login</h2>
-      <form>
-        <input type="email" id="email2" name="email2" placeholder="Email" required><br><br>
-        <input type="password" id="senha2" name="senha2" placeholder="Palavra-Passe" required><br><br>
-        <input type="button" onclick="login2()" value="Avançar">
-      </form>
-    </div>
-    <div class="right">
-      <h2>Criar Conta</h2>
-      <form>
-        <input type="text" id="nome" name="nome" placeholder="Nome" required><br><br>
-        <input type="text" id="cc1" name="cc1" placeholder="Cartao de Cidadao" required><br><br>
-        <input type="email" id="email1" name="email1" placeholder="Email" required><br><br>
-        <input type="password" id="senha1" name="senha1" placeholder="Palavra-Passe" required><br><br>
-        <div class="user-options"> 
-          <h4>Tipo de Utilizador</h4>
-          <form></form>
+  <fieldset>
+    <div class="form-container">
+      <div class="left">
+        <h2>Login</h2>
+        <form action="login.php" method="post">
+          <input type="email" id="email2" name="email2" placeholder="Email" required><br><br>
+          <input type="password" id="senha2" name="senha2" placeholder="Palavra-Passe" required><br><br>
+          <input type="submit" value="Avançar">
+        </form>
+      </div>
+      <div class="right">
+        <h2>Criar Conta</h2>
+        <form action="criarconta.php" method="post">
+          <input type="text" id="nome" name="nome" placeholder="Nome" required><br><br>
+          <input type="text" id="cc1" name="cc1" placeholder="Cartao de Cidadao" required><br><br>
+          <input type="email" id="email1" name="email1" placeholder="Email" required><br><br>
+          <input type="password" id="senha1" name="senha1" placeholder="Palavra-Passe" required><br><br>
+          <div class="user-options">
+            <h4>Tipo de Utilizador</h4>
             <div class="Cliente">
-              <input type="radio" id="cliente" name="user" value="Cliente">
+              <input type="radio" id="cliente" name="user" value="Cliente" required>
               <label for="cliente">Cliente</label>
             </div>
             <div class="Operador">
-              <input type="radio" id="operador" name="user" value="Operador">
+              <input type="radio" id="operador" name="user" value="Operador" required>
               <label for="operador">Operador</label>
             </div>
-          </form>
-        </div>
-        <input type="button" onclick="criarconta()" value="Avançar">
-      </form>
+          </div>
+          <input type="submit" value="Avançar">
+        </form>
+      </div>
     </div>
-  </div>
-</fieldset>
-
-
+  </fieldset>
 </body>
 </html>
