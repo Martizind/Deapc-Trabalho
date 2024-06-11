@@ -75,8 +75,8 @@ function login2() {
         email2.focus();
         return;
     }
-    if (!email2.value.includes('@') || !email2.value.endsWith('.com')) {
-        alert('Por favor, utilize um email válido que contenha "@" e termine com ".com".');
+    if (!email2.value.includes('@') || !email2.value.includes('.')) {
+        alert('Por favor, utilize um email válido que contenha "@" e um ponto ".".');
         email2.focus();
         return;
     }
@@ -93,7 +93,9 @@ function login2() {
      var nome = document.getElementById("nome");
      var cc1 = document.getElementById("cc1");
      var email1 = document.getElementById("email1");
-     var senha1 = document.getElementsByName("senha1");
+     var senha1 = document.getElementById("senha1");
+     var operador = document.getElementById("operador");
+     var cliente = document.getElementById("cliente");
 
      if (!nome.value) {
         alert('Por favor, preencha com o nome.');
@@ -105,26 +107,37 @@ function login2() {
         cc1.focus();
          return;
      }
+     if (!/^\d{8}$/.test(cc1.value)) {
+        alert('Por favor, utilize um Cartão de Cidadão válido com 8 números.');
+        cc1.focus();
+        return;
+    }
     if (!email1.value) {
          alert('Por favor, preencha o email.');
          email1.focus();
          return;
      }
-     if (!email1.value.includes('@') || !email1.value.endsWith('.com')) {
-        alert('Por favor, utilize um email válido que contenha "@" e termine com ".com".');
-        email2.focus();
-        return;
-     }
-    if (!senha1.value) {
-        alert('Por favor, preencha com a sua senha');
-         senha1.focus();
+     if (!email1.value.includes('@') || !email1.value.includes('.')) {
+        alert('Por favor, utilize um email válido que contenha "@" e um ponto ".".');
+        email1.focus();
         return;
     }
+    if (!senha1.value) {
+        alert('Por favor, preencha com a sua senha.');
+        senha1.focus();
+        return;
+    } 
     if (senha1.value.length < 8 || !/[A-Z]/.test(senha1.value) || !/[!@#$%^&*(),.?":{}|<>]/.test(senha1.value)) {
         alert('A senha deve conter pelo menos 8 caracteres, uma letra maiúscula e um caractere especial.');
         senha1.focus();
         return;
     }
+    if (!operador.checked && !cliente.checked) {
+        alert('Por favor, escolha o tipo de utilizador.');
+         operador.focus();
+        return;
+       }
+   
 
     window.location.href = "./dadospessoais.html";
 }
