@@ -1,37 +1,45 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>Dados Pessoais</title>
-<link rel="stylesheet" href="../styles/dadospessoais.css">
+    <title>Dados Pessoais</title>
+    <link rel="stylesheet" href="../styles/dadospessoais.css">
+    <script src="index.js"></script>
 </head>
 <body>
-    <div id="barra" >
-        <h1>ISEP Trip</h1>
-         
+    <div id="barra">
+        <h1 onclick="homepage()">ISEP Trip</h1>
     </div>
     <h2>DADOS PESSOAIS</h2> 
     <fieldset>
         <div class="column">
-            <input type="search" id="locin" name="locin" placeholder="Nome"><br><br>
-            <input type="search" id="locin" name="locin" placeholder="Cartao de Cidadao"><br><br>
-            <input type="search" id="locin" name="locin" placeholder="Email"><br><br>
-            <h4> O seu histórico de vigens connosco.</h4>
-            <div class="form-group">
-                <span class="label">Não existem viagens passadas na sua conta!</span>
-            </div>             
+            <form action="criarconta.php" method="GET">
+              <label for="nome">Nome:</label>
+                <?php echo htmlspecialchars($nome); ?>"><br><br>
+              <label for="nome">CC:</label>
+                <?php echo htmlspecialchars($cc); ?><br><br>
+              <label for="nome">Email:</label>
+                <?php echo htmlspecialchars($email); ?><br><br>
+              
+                
+                <h3>Tipo de Utilizador</h3>
+                <div class="Cliente">
+                    <input type="radio" id="cliente" name="user" value="Cliente" <?php if ($userType == 'Cliente') echo 'checked'; ?>>
+                    <label for="cliente">Cliente</label>
+                </div>
+                <div class="Operador">
+                    <input type="radio" id="operador" name="user" value="Operador" <?php if ($userType == 'Operador') echo 'checked'; ?>>
+                    <label for="operador">Operador de Viagem</label>
+                </div>
+
+                <br>
+                <input type="submit" value="Buscar">
+            </form>
         </div>
 
-        <h3>Tipo de Utilizador</h3>
-        <form>
-          <div class="Cliente">
-            <input type="radio" id="cliente" name="user" value="Cliente">
-            <label for="cliente">Cliente</label>
-          </div>
-          <div class="Operador">
-            <input type="radio" id="operador" name="user" value="Operador">
-            <label for="operador">Operador de Viagem</label>
-          </div>
-         </form>
-
+        <h4>O seu histórico de vigens connosco.</h4>
+        <div class="form-group">
+            <span class="label">Não existem viagens passadas na sua conta!</span>
+        </div>
     </fieldset>
-     
 </body>
+</html>
